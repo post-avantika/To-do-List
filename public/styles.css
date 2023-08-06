@@ -1,0 +1,83 @@
+
+  .box {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading {
+    text-align: center;
+    padding:10px;
+    background-color: white;
+    max-width: 400px;
+    margin: auto;
+    color:rgb(172, 63, 99);
+    margin-top:40px;
+    
+
+  }
+  
+  
+  form {
+    margin-top: 20px;
+    display: flex;
+  }
+  
+  
+  
+  button {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .gradient-custom {
+    background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%),
+      linear-gradient(121.28deg, #669600 0%, #ff0000 100%),
+      linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
+      radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
+      radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+    background-blend-mode: screen, color-dodge, overlay, difference, normal;
+    /* height:868px; */
+  }
+
+  
+  
+  #todo-list{
+    padding-left:0px;
+  }
+
+
+  input[type='checkbox'] + p {
+    display: inline;
+    width: 30px;
+  }
+
+  #add-todo-form{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .strikethrough:checked + P {
+    text-decoration:line-through
+  }
+
+  
+
+  P{
+    margin-left: 10px;
+  }
+  #ck-button input[type='checkbox']:hover  + P {
+    text-decoration:line-through;
+}
