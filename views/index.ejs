@@ -28,6 +28,7 @@
         <div class="item " id="ck-button" value="0">
           <input type="checkbox" name="checkbox" class="strikethrough" value="<%= item._id%>" onChange="this.form.submit()" id="in">
           <P><%=item.name%></P>
+          <a href="/edit/<%= item._id %>">Edit</a>
         </div>
       </form>
 

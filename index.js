@@ -61,6 +61,33 @@ app.post("/delete", async function(req, res) {
 });
 
 
+app.get("/edit/:itemId", async (req, res) => {
+  try {
+    const itemId = req.params.itemId;
+    const foundItem = await Item.findById(itemId);
+    res.render("edit-form.ejs", { item: foundItem });
+  } catch (err) {
+    console.error(err);
+    res.redirect("/");
+  }
+});
+
+// Define a route to handle the edit form submission
+app.post("/edit/:itemId", async (req, res) => {
+  try {
+    const itemId = req.params.itemId;
+    const updatedName = req.body.editedName;
+
+    await Item.findByIdAndUpdate(itemId, { name: updatedName });
+    console.log("Successfully updated item");
+    res.redirect("/");
+  } catch (err) {
+    console.error(err);
+    res.redirect("/");
+  }
+});
+
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
